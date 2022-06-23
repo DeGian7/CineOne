@@ -1,0 +1,1 @@
+export 'package:cine_one/login/Widgets/text_one.dart';
