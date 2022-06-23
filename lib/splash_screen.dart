@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
           fit: StackFit.expand,
           children: <Widget>[
             Spacer(),
-            RiveAnimation.asset("Assets/login/star_wars.riv",
+            RiveAnimation.asset("assets/login/star_wars.riv",
                 alignment: Alignment.center, fit: BoxFit.cover),
             Spacer(),
           ],

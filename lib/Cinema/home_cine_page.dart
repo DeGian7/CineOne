@@ -32,7 +32,7 @@ class HomeCinePage extends StatelessWidget {
               shape: BoxShape.circle,
               image: DecorationImage(
                 fit: BoxFit.contain,
-                image: AssetImage('Assets/login/user.png')
+                image: AssetImage('assets/login/user.png')
               )
             ),
           ),

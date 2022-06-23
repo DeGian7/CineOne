@@ -28,7 +28,7 @@ class MovieModel {
     MovieModel(
       id: '1',
         name: 'Morbius',
-        image: 'Assets/cinema/movie1.jpg',
+        image: 'assets/cinema/movie1.jpg',
         qualification: 4,
         year: 2022,
         duration: '1h 49m',
@@ -38,7 +38,7 @@ class MovieModel {
     MovieModel(
         id: '2',
         name: 'Uncharted',
-        image: 'Assets/cinema/movie2.jpg',
+        image: 'assets/cinema/movie2.jpg',
         qualification: 5,
         year: 2022,
         duration: '1h 55m',
@@ -48,7 +48,7 @@ class MovieModel {
     MovieModel(
         id: '3',
         name: 'Scream',
-        image: 'Assets/cinema/movie3.jpg',
+        image: 'assets/cinema/movie3.jpg',
         qualification: 5,
         year: 2022,
         duration: '1h 52m',
@@ -58,7 +58,7 @@ class MovieModel {
     MovieModel(
         id: '4',
         name: 'Sonic 2',
-        image: 'Assets/cinema/movie4.jpg',
+        image: 'assets/cinema/movie4.jpg',
         qualification: 4,
         year: 2022,
         duration: '2h 02m',
@@ -68,7 +68,7 @@ class MovieModel {
     MovieModel(
         id: '5',
         name: 'The Batman',
-        image: 'Assets/cinema/movie5.jpg',
+        image: 'assets/cinema/movie5.jpg',
         qualification: 5,
         year: 2022,
         duration: '2h 55m',
@@ -78,7 +78,7 @@ class MovieModel {
     MovieModel(
         id: '6',
         name: 'Moonfall',
-        image: 'Assets/cinema/movie6.jpg',
+        image: 'assets/cinema/movie6.jpg',
         qualification: 5,
         year: 2022,
         duration: '2h 10m',
@@ -88,7 +88,7 @@ class MovieModel {
     MovieModel(
         id: '7',
         name: 'Doctor Strange:\n in the multiverse of madness',
-        image: 'Assets/cinema/movie7.jpg',
+        image: 'assets/cinema/movie7.jpg',
         qualification: 5,
         year: 2022,
         duration: '2h 06m',
@@ -98,7 +98,7 @@ class MovieModel {
     MovieModel(
         id: '8',
         name: "Top Gun: Maverick",
-        image: 'Assets/cinema/movie8.jpg',
+        image: 'assets/cinema/movie8.jpg',
         qualification: 5,
         year: 2022,
         duration: '2h 11m',

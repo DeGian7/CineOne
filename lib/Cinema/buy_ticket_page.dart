@@ -187,21 +187,21 @@ class _ItemsDescription extends StatelessWidget {
             children: [
               Icon(Icons.circle, color: Colors.white, size: 10),
               SizedBox(width: 10.0),
-              TextOne(text: 'Free', fontSize: 20, color: Colors.white)
+              TextOne(text: 'Libre', fontSize: 20, color: Colors.white)
             ],
           ),
           Row(
             children: [
               Icon(Icons.circle, color: Color(0xff4A5660), size: 10),
               SizedBox(width: 10.0),
-              TextOne(text: 'Reserved', fontSize: 20, color: Color(0xff4A5660))
+              TextOne(text: 'Reservado', fontSize: 20, color: Color(0xff4A5660))
             ],
           ),
           Row(
             children: [
               Icon(Icons.circle, color: Colors.amber, size: 10),
               SizedBox(width: 10.0),
-              TextOne(text: 'Selected', fontSize: 20, color: Colors.amber)
+              TextOne(text: 'Seleccionado', fontSize: 20, color: Colors.amber)
             ],
           ),
         ],

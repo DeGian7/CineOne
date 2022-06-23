@@ -95,7 +95,7 @@ class _LoginState extends State<Login> {
                   child: Container(
                       width: 250,
                       height: 250,
-                      child: Image.asset("Assets/login/logo-black.png")),
+                      child: Image.asset("assets/login/logo-black.png")),
                 ),
               ),
               const Padding(
@@ -386,7 +386,7 @@ class _ButtonCustom extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('Assets/login/$icon', height: 20),
+              Image.asset('assets/login/$icon', height: 20),
               const SizedBox(width: 15.0),
               TextOne(
                   text: text, color: const Color(0xffA0A5B9), fontSize: 16)
