@@ -327,7 +327,7 @@ class SignupPageState extends State<SignupPage> {
       mostrarSnackBar("Usuario registrado correctamente", context);
       Navigator.pop(context);
       Navigator.push(context,
-          MaterialPageRoute(builder: (context) => HomeCinePage()));
+          MaterialPageRoute(builder: (context) => LoginPage()));
     } on FirebaseAuthException catch (e) {
       if (e.code == "weak-password") {
         mostrarSnackBar("Contraseña demasidado débil", context);
