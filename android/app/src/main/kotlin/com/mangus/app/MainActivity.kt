@@ -1,4 +1,4 @@
-package com.cineone.app
+package com.mangus.app
 
 import io.flutter.embedding.android.FlutterFragmentActivity
 import io.flutter.embedding.engine.FlutterEngine

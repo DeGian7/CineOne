@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "244506566292",
-    "project_id": "cineone-tm",
-    "storage_bucket": "cineone-tm.appspot.com"
+    "project_number": "847422781853",
+    "project_id": "mangocine",
+    "storage_bucket": "mangocine.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:244506566292:android:c87c13899fb6dc30e71e81",
+        "mobilesdk_app_id": "1:847422781853:android:88b1ca103aa3bf35689774",
         "android_client_info": {
-          "package_name": "com.cineone.app"
+          "package_name": "com.mangus.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "244506566292-c55tc74k3drihkub5r31p6t1h6dcnd4a.apps.googleusercontent.com",
+          "client_id": "847422781853-nflq7dqf211t1vjog4bjv2dfgjrhaops.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.cineone.app",
-            "certificate_hash": "823360d7629bd3c9a54344dc21ff31b117d982b9"
+            "package_name": "com.mangus.app",
+            "certificate_hash": "f51c2bc704a53f51d565237ce9501be120a95592"
           }
         },
         {
-          "client_id": "244506566292-2hu5ircj0v4vdaim32564q9675h0hj98.apps.googleusercontent.com",
+          "client_id": "847422781853-lkfik4u99o8u4mbuvpbt6jfepu5eflor.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDlWYYLx2tj6amZzS3wsH5-wVcGyzpeSqo"
+          "current_key": "AIzaSyAEEKbl1mx4tl6GMPx8wArDT0sNoKjCTxo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "244506566292-2hu5ircj0v4vdaim32564q9675h0hj98.apps.googleusercontent.com",
+              "client_id": "847422781853-lkfik4u99o8u4mbuvpbt6jfepu5eflor.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
