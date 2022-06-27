@@ -1,10 +1,10 @@
 import 'package:cine_one/Login/auxiliar.dart';
+import 'package:cine_one/Login/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../Cinema/home_cine_page.dart';
 import 'Widgets/text_one.dart';
-import 'login.dart';
 
 class SignupPage extends StatefulWidget {
   @override
@@ -37,7 +37,7 @@ class SignupPageState extends State<SignupPage> {
     return Scaffold(
       body: Container(
         child: Scaffold(
-          backgroundColor: Color.fromARGB(255, 255, 255, 255),
+          backgroundColor: Color.fromARGB(255, 245, 245, 245),
           body: SingleChildScrollView(
             child: Form(
               key: _formKey,
@@ -56,7 +56,7 @@ class SignupPageState extends State<SignupPage> {
                         child: Container(
                           height: 50,
                           decoration: const BoxDecoration(
-                            color: Colors.white,
+                            color: Color.fromARGB(255, 245, 245, 245),
                           ),
                         ),
                       ),
@@ -81,14 +81,14 @@ class SignupPageState extends State<SignupPage> {
                         child: Container(
                           height: 50,
                           decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: Color.fromARGB(255, 245, 245, 245),
                               borderRadius: const BorderRadius.only(
                                   topLeft: const Radius.circular(40.0)),
-                              border: Border.all(color: Colors.white)),
+                              border: Border.all(color: Color.fromARGB(255, 245, 245, 245))),
                         ),
                       ),
                       Positioned(
-                        top: 45,
+                        top: 55,
                         left: 20,
                         child: Container(
                             height: 70,
@@ -105,7 +105,7 @@ class SignupPageState extends State<SignupPage> {
                             )),
                       ),
                       const Positioned(
-                          top: 65,
+                          top: 75,
                           left: 100,
                           child: TextOne(
                               text: 'CineOne',
@@ -327,7 +327,7 @@ class SignupPageState extends State<SignupPage> {
       mostrarSnackBar("Usuario registrado correctamente", context);
       Navigator.pop(context);
       Navigator.push(context,
-          MaterialPageRoute(builder: (context) => LoginPage()));
+          MaterialPageRoute(builder: (context) => HomeCinePage()));
     } on FirebaseAuthException catch (e) {
       if (e.code == "weak-password") {
         mostrarSnackBar("Contraseña demasidado débil", context);

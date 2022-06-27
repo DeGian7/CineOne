@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:cine_one/Cinema/Models/movie_model_soon.dart';
+import 'package:cine_one/Drawer/navigation_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:cine_one/Cinema/Models/movie_model.dart';
 import 'package:cine_one/Cinema/Models/trailers_model.dart';
@@ -14,10 +15,15 @@ class HomeCinePage extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      backgroundColor: Color(0xff22222C),
+      backgroundColor: Color.fromARGB(255, 245, 245, 245),
+      drawer: NavigationDrawer(),
       appBar: AppBar(
         backgroundColor: Color(0xff22222C),
-        leading: Icon(Icons.menu, color: Colors.white, size: 30),
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.menu, color: Colors.white, size: 30),
+              onPressed: () { Scaffold.of(context).openDrawer(); });}),
         elevation: 0,
         actions: [
           Icon(Icons.search, size: 30),
@@ -114,7 +120,7 @@ class _ItemsSoonMovie extends StatelessWidget {
             SizedBox(height: 15.0),
             SizedBox(
               width: 160,
-              child: TextOne(text: movieModelSoon.name, color: Colors.white),
+              child: TextOne(text: movieModelSoon.name, color: Colors.black),
             ),
             SizedBox(height: 5.0),
             RatingBar.builder(
@@ -163,7 +169,7 @@ class _ItemsNowCinemas extends StatelessWidget {
             SizedBox(height: 15.0),
             SizedBox(
               width: 160,
-              child: TextOne(text: movieModel.name, color: Colors.white),
+              child: TextOne(text: movieModel.name, color: Colors.black),
             ),
             SizedBox(height: 5.0),
             RatingBar.builder(
@@ -196,7 +202,7 @@ class _ItemTitle extends StatelessWidget {
           children: [
             TextOne(
                 text: title,
-                color: Colors.white,
+                color: Colors.black,
                 fontSize: 25,
                 fontWeight: FontWeight.w500),
             TextOne(text: 'Ver todo', color: Colors.grey),

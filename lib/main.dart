@@ -35,32 +35,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-/* void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  Firebase.initializeApp().then((value){
-    runApp(MyApp());
-  });
-}
-
---------------------
-List usuarios = [];
-  @override
-  void initState() {
-    super.initState();
-    getUsers();
-  }
-
-  void getUsers() async {
-    CollectionReference collectionReference = 
-        FirebaseFirestore.instance.collection("users");
-    
-    QuerySnapshot users = await collectionReference.get();
-
-    if (users.docs.length != 0) {
-      for (var doc in users.docs) {
-        print(doc.data());
-        usuarios.add(doc.data());
-      }
-    }
-  } */

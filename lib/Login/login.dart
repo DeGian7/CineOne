@@ -74,7 +74,7 @@ class _LoginState extends State<Login> {
 
     return Scaffold(
       key: _scaffoldKey,
-      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+      backgroundColor: const Color.fromARGB(255, 245, 245, 245),
       body: SingleChildScrollView(
         child: Form(
           key: _formKey,
@@ -154,7 +154,7 @@ class _LoginState extends State<Login> {
                     focusedBorder: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(5.0)),
                       borderSide:
-                          const BorderSide(color: Colors.white, width: 2),
+                          const BorderSide(color: Color.fromARGB(255, 205, 205, 205), width: 2),
                     ),
                   ),
                 ),
