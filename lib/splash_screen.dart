@@ -15,6 +15,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
+  // ignore: must_call_super
   void initState() {
     Future.delayed(
       Duration(milliseconds: 12500),

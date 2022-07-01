@@ -10,20 +10,21 @@ import 'package:cine_one/Cinema/Widgets/Widgets.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class HomeCinePage extends StatelessWidget {
+  final _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 245, 245, 245),
       drawer: NavigationDrawer(),
+      key: _scaffoldKey,
       appBar: AppBar(
         backgroundColor: Color(0xff22222C),
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
               icon: Icon(Icons.menu, color: Colors.white, size: 30),
-              onPressed: () { Scaffold.of(context).openDrawer(); });}),
+              onPressed: () => _scaffoldKey.currentState!.openDrawer());}),
         elevation: 0,
         actions: [
           Icon(Icons.search, size: 30),

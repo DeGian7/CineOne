@@ -1,4 +1,5 @@
 import 'package:cine_one/Drawer/drawer_item.dart';
+import 'package:cine_one/Drawer/pages/settings.dart';
 import 'package:cine_one/Drawer/pages/shopping.dart';
 import 'package:flutter/material.dart';
 
@@ -66,7 +67,22 @@ class NavigationDrawer extends StatelessWidget {
     Navigator.pop(context);
 
     switch(index){
+      case 0:
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const Shopping()));
+        break;
       case 1:
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const Shopping()));
+        break;
+      case 2:
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const Shopping()));
+        break;
+      case 3:
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const Shopping()));
+        break;  
+      case 4:
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const Settings()));
+        break;
+      case 5:
         Navigator.push(context, MaterialPageRoute(builder: (context) => const Shopping()));
         break;
     }
