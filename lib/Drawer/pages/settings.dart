@@ -12,7 +12,7 @@ class Settings extends StatelessWidget {
       builder: (context, preferences) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text('Settings'),
+            title: const Text('Ajustes'),
             centerTitle: true,
             automaticallyImplyLeading: true,
             backgroundColor: Color(0xff22222C),

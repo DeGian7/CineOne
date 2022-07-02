@@ -1,6 +1,9 @@
+import 'package:cine_one/Cinema/details_payment_page.dart';
+import 'package:cine_one/Cinema/home_cine_page.dart';
 import 'package:cine_one/Drawer/drawer_item.dart';
 import 'package:cine_one/Drawer/pages/settings.dart';
-import 'package:cine_one/Drawer/pages/shopping.dart';
+import 'package:cine_one/Drawer/pages/user/profile_page.dart';
+import 'package:cine_one/Login/login.dart';
 import 'package:flutter/material.dart';
 
 class NavigationDrawer extends StatelessWidget {
@@ -32,14 +35,14 @@ class NavigationDrawer extends StatelessWidget {
               ),
               const SizedBox(height: 30,),
               DrawerItem(
-                  name: 'Mensajes',
-                  icon: Icons.message_outlined,
+                  name: 'Recomendados',
+                  icon: Icons.star_half_rounded,
                   onPressed: ()=> onItemPressed(context, index: 2)
               ),
               const SizedBox(height: 30,),
               DrawerItem(
                   name: 'Favoritos',
-                  icon: Icons.favorite_outline,
+                  icon: Icons.favorite,
                   onPressed: ()=> onItemPressed(context, index: 3)
               ),
               const SizedBox(height: 30,),
@@ -68,22 +71,22 @@ class NavigationDrawer extends StatelessWidget {
 
     switch(index){
       case 0:
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const Shopping()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage()));
         break;
       case 1:
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const Shopping()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailsPaymentPage()));
         break;
       case 2:
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const Shopping()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => HomeCinePage()));
         break;
       case 3:
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const Shopping()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => HomeCinePage()));
         break;  
       case 4:
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const Settings()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Settings()));
         break;
       case 5:
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const Shopping()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
         break;
     }
   }
