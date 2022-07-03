@@ -293,6 +293,7 @@ class _LoginState extends State<Login> {
     if (formState!.validate()) {
       formState.save();
       try {
+        // ignore: unused_local_variable
         UserCredential credencial = await auth.signInWithEmailAndPassword(
             email: _emailController.text.trim(),
             password: _contrasenaController.text.trim());
