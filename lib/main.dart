@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
   Future<PreferencesCubit> buildBloc() async {
     final prefs = await SharedPreferences.getInstance();
     final service = MyPreferencesService(prefs);
-    return PreferencesCubit(service, await service.get());
+    return PreferencesCubit(service, service.get());
   }
 } 
 

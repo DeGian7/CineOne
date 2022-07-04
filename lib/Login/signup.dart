@@ -318,6 +318,7 @@ class SignupPageState extends State<SignupPage> {
   }
 
   Future<void> registroNuevoUsuario(BuildContext context) async {
+    // ignore: unused_local_variable
     User usuario;
     try {
       usuario = (await auth.createUserWithEmailAndPassword(
