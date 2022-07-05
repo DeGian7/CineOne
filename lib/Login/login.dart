@@ -93,8 +93,8 @@ class _LoginState extends State<Login> {
                 padding: const EdgeInsets.only(top: 0, bottom: 0.0),
                 child: Center(
                   child: Container(
-                      width: 250,
-                      height: 250,
+                      width: 223,
+                      height: 223,
                       child: Image.asset("assets/login/logo-black.png")),
                 ),
               ),
