@@ -5,7 +5,7 @@ class UserPreferences {
     imagePath:
         'https://cdn-icons-png.flaticon.com/512/149/149071.png',
     name: 'User',
-    email: 'correo.@email.com',
+    email: 'correo@email.com',
     about:
         'Acción || Terror || Suspenso',
     isDarkMode: false,

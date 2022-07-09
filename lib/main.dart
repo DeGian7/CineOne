@@ -16,6 +16,7 @@ void main() async {
       appId: "1:244506566292:android:c87c13899fb6dc30e71e81", // Your appId
       messagingSenderId: "", // Your messagingSenderId
       projectId: "cineone-tm",
+/*       databaseURL: "https://cineone-tm-default-rtdb.firebaseio.com" */
     ),
   ); // Your projectId);
   runApp(MyApp());

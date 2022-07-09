@@ -1,0 +1,1 @@
+export "package:cine_one/Drawer/pages/calification/fonts.dart";

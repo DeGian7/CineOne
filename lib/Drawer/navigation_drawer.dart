@@ -1,6 +1,8 @@
 import 'package:cine_one/Cinema/details_payment_page.dart';
-import 'package:cine_one/Cinema/home_cine_page.dart';
 import 'package:cine_one/Drawer/drawer_item.dart';
+import 'package:cine_one/Drawer/pages/calification/calification.dart';
+import 'package:cine_one/Drawer/pages/help/messages_list.dart';
+import 'package:cine_one/Drawer/pages/location/home.dart';
 import 'package:cine_one/Drawer/pages/settings.dart';
 import 'package:cine_one/Drawer/pages/user/profile_page.dart';
 import 'package:cine_one/Login/login.dart';
@@ -35,14 +37,14 @@ class NavigationDrawer extends StatelessWidget {
               ),
               const SizedBox(height: 30,),
               DrawerItem(
-                  name: 'Recomendados',
-                  icon: Icons.star_half_rounded,
+                  name: 'Ubícanos',
+                  icon: Icons.map_rounded,
                   onPressed: ()=> onItemPressed(context, index: 2)
               ),
               const SizedBox(height: 30,),
               DrawerItem(
-                  name: 'Favoritos',
-                  icon: Icons.favorite,
+                  name: 'Califícanos',
+                  icon: Icons.emoji_emotions_sharp,
                   onPressed: ()=> onItemPressed(context, index: 3)
               ),
               const SizedBox(height: 30,),
@@ -55,9 +57,15 @@ class NavigationDrawer extends StatelessWidget {
               ),
               const SizedBox(height: 30,),
               DrawerItem(
+                  name: 'Ayuda',
+                  icon: Icons.help_outlined,
+                  onPressed: ()=> onItemPressed(context, index: 5)
+              ),
+              const SizedBox(height: 30,),
+              DrawerItem(
                   name: 'Cerrar sesión',
                   icon: Icons.logout,
-                  onPressed: ()=> onItemPressed(context, index: 5)
+                  onPressed: ()=> onItemPressed(context, index: 6)
               ),
             ],
           ),
@@ -77,15 +85,18 @@ class NavigationDrawer extends StatelessWidget {
         Navigator.push(context, MaterialPageRoute(builder: (context) => DetailsPaymentPage()));
         break;
       case 2:
-        Navigator.push(context, MaterialPageRoute(builder: (context) => HomeCinePage()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
         break;
       case 3:
-        Navigator.push(context, MaterialPageRoute(builder: (context) => HomeCinePage()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Calification()));
         break;  
       case 4:
         Navigator.push(context, MaterialPageRoute(builder: (context) => Settings()));
         break;
       case 5:
+        Navigator.push(context, MaterialPageRoute(builder: (context) => MessagesList()));
+        break;
+      case 6:
         Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
         break;
     }
