@@ -62,17 +62,3 @@ class MyApp extends StatelessWidget {
     return PreferencesCubit(service, service.get());
   }
 } 
-
-/* /*     return MultiBlocProvider(
-      providers: [
-        BlocProvider<CinemaBloc>(create: (context) => CinemaBloc())  
-      ], 
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'CineOne',
-        theme: ThemeData(),
-        home: SplashScreen(),
-      ),
-    ); */
-  }
-} */
