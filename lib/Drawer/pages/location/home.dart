@@ -4,14 +4,14 @@ import 'package:cine_one/Drawer/pages/location/details.dart';
 import 'package:cine_one/Drawer/pages/location/model.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class Location extends StatefulWidget {
+  const Location({Key? key}) : super(key: key);
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _LocationState createState() => _LocationState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _LocationState extends State<Location> {
   late PageController _pageController;
   int _currentPage = 0;
 
@@ -122,13 +122,13 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Text(
             data.title,
             style: const TextStyle(
-                color: Color(0xff22222C), fontSize: 30, fontWeight: FontWeight.bold),
+                color: Color(0xff22222C), fontSize: 25, fontWeight: FontWeight.bold),
           ),
         ),
         Padding(
           padding: const EdgeInsets.only(top: 20),
           child: Text(
-            data.direccion,
+            data.direction,
             style: const TextStyle(
                 color: Color(0xff22222C), fontSize: 20, fontWeight: FontWeight.bold),
           ),

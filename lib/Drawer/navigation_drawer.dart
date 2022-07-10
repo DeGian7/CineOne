@@ -85,7 +85,7 @@ class NavigationDrawer extends StatelessWidget {
         Navigator.push(context, MaterialPageRoute(builder: (context) => DetailsPaymentPage()));
         break;
       case 2:
-        Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Location()));
         break;
       case 3:
         Navigator.push(context, MaterialPageRoute(builder: (context) => Calification()));

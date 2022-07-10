@@ -26,7 +26,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
               widget.data.title,
               style: const TextStyle(
                   color: Color(0xff22222C),
-                  fontSize: 32,
+                  fontSize: 25,
                   fontWeight: FontWeight.bold),
             ),
           ),
@@ -61,10 +61,10 @@ class _DetailsScreenState extends State<DetailsScreen> {
             child: Padding(
               padding: const EdgeInsets.only(top: 0),
               child: Text(
-                widget.data.direccion,
+                widget.data.direction,
                 style: const TextStyle(
                     color: Color(0xff22222C),
-                    fontSize: 22,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -77,7 +77,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 widget.data.price,
                 style: const TextStyle(
                     color: Color(0xff22222C),
-                    fontSize: 20,
+                    fontSize: 15,
                     fontWeight: FontWeight.bold),
               ),
             ),
