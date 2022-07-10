@@ -74,7 +74,7 @@ class _MyHomePageState extends State<Calification> {
                                 height: 300,
                                 width: 300,
                                 child: FlareActor(
-                                  'assets/flarre/happiness_emoji.flr',
+                                  'assets/login/happiness_emoji.flr',
                                   alignment: Alignment.center,
                                   fit: BoxFit.contain,
                                   controller: _smileyController,
