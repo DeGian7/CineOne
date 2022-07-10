@@ -28,8 +28,9 @@ class _MyHomePageState extends State<Calification> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
+      backgroundColor: const Color.fromARGB(255, 245, 245, 245),
       appBar: AppBar(
+        backgroundColor: Color(0xff22222C),
         title: Text(''),
       ),
       body: SafeArea(
@@ -43,7 +44,7 @@ class _MyHomePageState extends State<Calification> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(24),
                   ),
-                  color: Colors.white,
+                  color: Color.fromARGB(255, 245, 245, 245),
                   child: Container(
                     height: 550,
                     padding: const EdgeInsets.symmetric(
@@ -53,11 +54,11 @@ class _MyHomePageState extends State<Calification> {
                       gradient: const LinearGradient(
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
-                          colors: [Color(0xFF213B6C), Color(0xFF0059A5)]),
+                          colors: [Color(0xff22222C), Color(0xff44444C)]),
                       // ignore: prefer_const_literals_to_create_immutables
                       boxShadow: [
                         const BoxShadow(
-                            color: Colors.black12,
+                            color: Colors.white,
                             blurRadius: 12,
                             offset: Offset(3, 12)),
                       ],

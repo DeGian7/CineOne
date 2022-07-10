@@ -22,7 +22,9 @@ class MessagesListState extends State<MessagesList> {
     WidgetsBinding.instance.addPostFrameCallback((_) => _scrollHaciaAbajo());
 
     return Scaffold(
-        appBar: AppBar(title: const Text('Soporte técnico')),
+        appBar: AppBar(
+          backgroundColor: Color(0xff22222C),
+          title: const Text('Escríbanos')),
         body: Padding(
             padding: EdgeInsets.all(16.0),
             child: Column(children: [

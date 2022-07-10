@@ -14,31 +14,33 @@ class _DetailsScreenState extends State<DetailsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        iconTheme: const IconThemeData(color: Colors.black54),
+        backgroundColor: Color(0xff22222C),
+        iconTheme: const IconThemeData(color: Colors.white),
         elevation: 0,
       ),
       body: Column(
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.only(bottom: 20),
+            padding: const EdgeInsets.all(60.0),
             child: Text(
               widget.data.title,
               style: const TextStyle(
-                  color: Colors.black87,
-                  fontSize: 25,
+                  color: Color(0xff22222C),
+                  fontSize: 32,
                   fontWeight: FontWeight.bold),
             ),
           ),
           Expanded(
-              flex: 7,
+              flex: 8,
               child: Padding(
-                padding: const EdgeInsets.all(30.0),
+                padding: const EdgeInsets.only(
+                  top: 0.0, left: 40.0, right: 40.0, bottom: 60.0,
+                ),
                 child: Hero(
                   tag: widget.data.imageName,
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color(0xff22222C),
                         borderRadius: BorderRadius.circular(30),
                         image: DecorationImage(
                             image: AssetImage(
@@ -49,7 +51,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                           BoxShadow(
                               offset: Offset(0, 4),
                               blurRadius: 4,
-                              color: Colors.black26)
+                              color: Color(0xff22222C))
                         ]),
                   ),
                 ),
@@ -61,7 +63,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
               child: Text(
                 widget.data.direccion,
                 style: const TextStyle(
-                    color: Colors.black,
+                    color: Color(0xff22222C),
                     fontSize: 22,
                     fontWeight: FontWeight.bold),
               ),
@@ -74,7 +76,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
               child: Text(
                 widget.data.price,
                 style: const TextStyle(
-                    color: Colors.black,
+                    color: Color(0xff22222C),
                     fontSize: 20,
                     fontWeight: FontWeight.bold),
               ),

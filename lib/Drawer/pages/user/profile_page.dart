@@ -20,7 +20,10 @@ class _ProfilePageState extends State<ProfilePage> {
       appBar: buildAppBar(context),
       body: ListView(
         physics: BouncingScrollPhysics(),
-        children: [
+        children: <Widget> [
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+          ),
           ProfileWidget(
             imagePath: user.imagePath,
             onClicked: () async {},
@@ -64,11 +67,13 @@ class _ProfilePageState extends State<ProfilePage> {
           children: [
             Text(
               'Géneros destacados',
+              textAlign: TextAlign.center,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 16),
             Text(
               user.about,
+              textAlign: TextAlign.center,
               style: TextStyle(fontSize: 16, height: 1.4),
             ),
           ],

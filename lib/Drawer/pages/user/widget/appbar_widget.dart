@@ -6,7 +6,7 @@ AppBar buildAppBar(BuildContext context) {
 
   return AppBar(
     leading: BackButton(),
-    backgroundColor: Colors.transparent,
+    backgroundColor: Color(0xff22222C),
     elevation: 0,
     actions: [
       IconButton(

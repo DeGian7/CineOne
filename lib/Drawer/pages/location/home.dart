@@ -31,18 +31,21 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color(0xff22222C),
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 40),
         child: Column(
           children: <Widget>[
             const Padding(
-              padding: EdgeInsets.all(40.0),
+              padding: EdgeInsets.all(20.0),
               child: Center(
                 child: Text("Nuestras Sedes",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.black87,
-                        fontSize: 30)),
+                        color: Color(0xff22222C),
+                        fontSize: 40)),
               ),
             ),
             AspectRatio(
@@ -96,7 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 child: Container(
                   decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 159, 73, 73),
+                      color: Color(0xff22222C),
                       borderRadius: BorderRadius.circular(10),
                       image: DecorationImage(
                           image: AssetImage(
@@ -107,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         BoxShadow(
                             offset: Offset(0, 4),
                             blurRadius: 4,
-                            color: Colors.black26)
+                            color: Color(0xff22222C))
                       ]),
                 ),
               ),
@@ -119,7 +122,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Text(
             data.title,
             style: const TextStyle(
-                color: Colors.black, fontSize: 30, fontWeight: FontWeight.bold),
+                color: Color(0xff22222C), fontSize: 30, fontWeight: FontWeight.bold),
           ),
         ),
         Padding(
@@ -127,7 +130,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Text(
             data.direccion,
             style: const TextStyle(
-                color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
+                color: Color(0xff22222C), fontSize: 20, fontWeight: FontWeight.bold),
           ),
         ),
       ],
