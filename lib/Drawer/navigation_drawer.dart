@@ -1,12 +1,15 @@
 import 'package:cine_one/Cinema/details_payment_page.dart';
 import 'package:cine_one/Drawer/drawer_item.dart';
+import 'package:cine_one/Drawer/pages/Recomendations/recomendados.dart';
 import 'package:cine_one/Drawer/pages/calification/calification.dart';
 import 'package:cine_one/Drawer/pages/help/messages_list.dart';
 import 'package:cine_one/Drawer/pages/location/home.dart';
 import 'package:cine_one/Drawer/pages/settings.dart';
 import 'package:cine_one/Drawer/pages/user/profile_page.dart';
 import 'package:cine_one/Login/login.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer({Key? key}) : super(key: key);
@@ -17,7 +20,7 @@ class NavigationDrawer extends StatelessWidget {
       child: Material(
         color: Color(0xff22222C),
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(24.0, 80, 24, 0),
+          padding: const EdgeInsets.fromLTRB(24, 60, 24, 0),
           child: Column(
             children: [
               headerWidget(),
@@ -37,15 +40,21 @@ class NavigationDrawer extends StatelessWidget {
               ),
               const SizedBox(height: 30,),
               DrawerItem(
+                  name: 'Recomendados',
+                  icon: Icons.star_half_outlined,
+                  onPressed: ()=> onItemPressed(context, index: 2)
+              ),
+              const SizedBox(height: 30,),
+              DrawerItem(
                   name: 'Ubícanos',
                   icon: Icons.map_rounded,
-                  onPressed: ()=> onItemPressed(context, index: 2)
+                  onPressed: ()=> onItemPressed(context, index: 3)
               ),
               const SizedBox(height: 30,),
               DrawerItem(
                   name: 'Califícanos',
                   icon: Icons.emoji_emotions_sharp,
-                  onPressed: ()=> onItemPressed(context, index: 3)
+                  onPressed: ()=> onItemPressed(context, index: 4)
               ),
               const SizedBox(height: 30,),
               const Divider(thickness: 1, height: 10, color: Colors.grey,),
@@ -53,19 +62,19 @@ class NavigationDrawer extends StatelessWidget {
               DrawerItem(
                   name: 'Ajustes',
                   icon: Icons.settings,
-                  onPressed: ()=> onItemPressed(context, index: 4)
+                  onPressed: ()=> onItemPressed(context, index: 5)
               ),
               const SizedBox(height: 30,),
               DrawerItem(
                   name: 'Ayuda',
                   icon: Icons.help_outlined,
-                  onPressed: ()=> onItemPressed(context, index: 5)
+                  onPressed: ()=> onItemPressed(context, index: 6)
               ),
               const SizedBox(height: 30,),
               DrawerItem(
                   name: 'Cerrar sesión',
                   icon: Icons.logout,
-                  onPressed: ()=> onItemPressed(context, index: 6)
+                  onPressed: ()=> onItemPressed(context, index: 7)
               ),
             ],
           ),
@@ -85,39 +94,54 @@ class NavigationDrawer extends StatelessWidget {
         Navigator.push(context, MaterialPageRoute(builder: (context) => DetailsPaymentPage()));
         break;
       case 2:
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Location()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => MovieRecomend()));
         break;
       case 3:
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Location()));
+        break;
+      case 4:
         Navigator.push(context, MaterialPageRoute(builder: (context) => Calification()));
         break;  
-      case 4:
+      case 5:
         Navigator.push(context, MaterialPageRoute(builder: (context) => Settings()));
         break;
-      case 5:
+      case 6:
         Navigator.push(context, MaterialPageRoute(builder: (context) => MessagesList()));
         break;
-      case 6:
+      case 7:
         Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
         break;
+
     }
   }
 
-  Widget headerWidget() {
+Widget headerWidget() {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
+    final User? usuario = FirebaseAuth.instance.currentUser;
+    String? email = "";
+
+    if (usuario != null) {
+      email = usuario.email;
+    }
     return Row(
       children: [
         const CircleAvatar(
           radius: 40,
           backgroundImage: AssetImage('assets/login/user.png'),
         ),
-        const SizedBox(width: 20,),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            Text('Nombre de usuario', style: TextStyle(fontSize: 14, color: Colors.white)),
-            SizedBox(height: 10,),
-            Text('correo@email.com', style: TextStyle(fontSize: 14, color: Colors.white))
-          ],
-        )
+        const SizedBox(
+          width: 20,
+        ),
+        Text(
+          email!,
+          style: const TextStyle(
+            fontSize: 15,
+            color: Colors.white,
+          ),
+          textAlign: TextAlign.start,
+        ),
       ],
     );
   }
